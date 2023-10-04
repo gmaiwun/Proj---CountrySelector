@@ -8,26 +8,63 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
-
 body {
-  font-family: system-ui;
+  font-family: "Arimo", sans-serif;
   color: #555;
-  background-color: #f7f7f7;
+  background-color: #5f95a5;
   min-height: 100vh;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
+}
+.header {
+  width: 100%;
+  background: #5f95a5;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+label {
+  color: white;
+  padding: 10px;
+}
+select,
+button {
+  background-color: azure;
+  border: none;
+  height: 100%;
+  width: 150px;
+  margin-right: 20px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
 }
 
+.locationData {
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+}
 .container {
-  width: 50%;
+  width: 45%;
   height: 100%;
   display: flex;
   flex-flow: column;
   align-items: center;
   overflow-y: scroll;
+  background-color: azure;
+  border-radius: 0.7rem;
 }
 .container::-webkit-scrollbar {
   display: none;
@@ -54,16 +91,15 @@ body {
 }
 
 .neighbor::before {
-  content: "Neighbour country";
+  content: "Close Locations A/B";
   width: 100%;
   position: absolute;
   top: -4rem;
-
   text-align: center;
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #888;
+  color: rgb(160, 120, 120);
 }
 
 .neighbor {
@@ -135,7 +171,7 @@ body {
 
 #map {
   height: 100%;
-  width: 50%;
-  border: 50px solid #f7f7f7;
+  width: 45%;
+  /* border: 50px solid #f7f7f7; */
   border-radius: 0.7rem;
 }

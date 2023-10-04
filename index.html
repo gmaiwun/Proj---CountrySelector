@@ -19,28 +19,57 @@
     ></script>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="script.js"></script>
     <title>Store Country Selector</title>
   </head>
   <body>
-    <main class="container">
-      <div class="countries">
-        <!--
-        <article class="country">
-          <img class="country__img" src="" />
-          <div class="country__data">
-            <h3 class="country__name">COUNTRY</h3>
-            <h4 class="country__region">REGION</h4>
-            <p class="country__row"><span>👫</span>POP people</p>
-            <p class="country__row"><span>🗣️</span>LANG</p>
-            <p class="country__row"><span>💰</span>CUR</p>
-          </div>
-        </article>
-        -->
-      </div>
-      <!-- <button class="btn-country">Where am I?</button> -->
-      <div class="images"></div>
-    </main>
-    <div id="map"></div>
+    <div class="header">
+      <form action="">
+        <label for="region">Regions With Our Presence</label>
+        <select name="Regions" id="region">
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="The Caribbean">The Caribbean</option>
+          <option value="Central America">Central America</option>
+          <option value="North America">North America</option>
+          <option value="Oceania">Oceania</option>
+          <option value="South America">South America</option>
+        </select>
+        <label for="Store-Locations">Store Locations</label>
+        <select name="Store Locations" id="Store-Locations">
+          <option value="Select Country">Country</option>
+        </select>
+        <button>Find Store</button>
+      </form>
+    </div>
+
+    <div class="locationData">
+      <main class="container">
+        <div class="countries">
+          <!--
+          <article class="country">
+            <img class="country__img" src="" />
+            <div class="country__data">
+              <h3 class="country__name">COUNTRY</h3>
+              <h4 class="country__region">REGION</h4>
+              <p class="country__row"><span>👫</span>POP people</p>
+              <p class="country__row"><span>🗣️</span>LANG</p>
+              <p class="country__row"><span>💰</span>CUR</p>
+            </div>
+          </article>
+          -->
+        </div>
+        <!-- <button class="btn-country">Where am I?</button> -->
+        <div class="images"></div>
+      </main>
+      <div id="map"></div>
+    </div>
   </body>
 </html>
