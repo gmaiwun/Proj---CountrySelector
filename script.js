@@ -67,3 +67,9 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
+
+//////////////////////////////Form Submission
+
+document.querySelector("button").addEventListener("click", function (e) {
+  e.preventDefault();
+});
