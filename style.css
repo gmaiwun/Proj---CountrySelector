@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -18,14 +18,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .container {
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-flow: column;
   align-items: center;
+  overflow-y: scroll;
 }
-
+.container::-webkit-scrollbar {
+  display: none;
+}
 .countries {
   /* margin-bottom: 8rem; */
   display: flex;
@@ -43,7 +49,7 @@ body {
   font-size: 1.8rem;
   width: 30rem;
   border-radius: 0.7rem;
-  margin: 0 3rem;
+  /* margin: 0 3rem; */
   /* overflow: hidden; */
 }
 
@@ -125,4 +131,11 @@ body {
   margin: 2rem;
   border: 3rem solid white;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  height: 100%;
+  width: 50%;
+  border: 50px solid #f7f7f7;
+  border-radius: 0.7rem;
 }

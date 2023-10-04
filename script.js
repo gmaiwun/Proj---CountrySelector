@@ -47,6 +47,7 @@ const getCountryData = function (country) {
     .then((response) => response.json())
     .then((data) => {
       renderCountry(data[0]); // The main country is here. We continue to tap into more data by chaining
+      console.log(data); /// How to drill through this data for an integrated map???
       const neighbors = [...data[0]?.borders];
       if (!neighbors) return; // guard clause
       /// Country 2
@@ -57,4 +58,12 @@ const getCountryData = function (country) {
       });
     });
 };
-getCountryData("mexico");
+getCountryData("cameroon");
+
+/////////////////////////////////Map Rendering
+
+const map = L.map("map").setView([38.897957, -77.03656], 13);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
