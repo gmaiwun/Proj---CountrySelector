@@ -48,12 +48,12 @@ const getCountryData = function (country) {
     .then((data) => {
       renderCountry(data[0]); // The main country is here. We continue to tap into more data by chaining
       console.log(data); /// How to drill through this data for an integrated map???
-      const neighbors = [...data[0]?.borders];
+      const neighbors = [...data[1]?.borders];
       if (!neighbors) return; // guard clause
       /// Country 2
       neighbors.forEach((neighbor) => {
         fetch(`https://restcountries.com/v3.1/alpha/${neighbor}`)
-          .then((response) => response.json())
+          .then((response) => response.json)
           .then((data) => renderCountry(data[0], "neighbor"));
       });
     });
